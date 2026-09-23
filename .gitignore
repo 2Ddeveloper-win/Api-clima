@@ -1,0 +1,21 @@
+# Caché y archivos compilados de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Entornos virtuales (por si llegas a usar uno)
+venv/
+env/
+.venv/
+
+# Variables de entorno y credenciales sensibles
+.env
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.dbs
+
+# Configuraciones de editores de código
+.vscode/
+.idea/

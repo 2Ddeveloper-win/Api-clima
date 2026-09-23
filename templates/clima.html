@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos Meteorológicos</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        header {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 1.8rem;
+            color: #333;
+        }
+        .btn-volver {
+            padding: 8px 16px;
+            background-color: #6c757d;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+        .btn-volver:hover {
+            background-color: #5a6268;
+        }
+        .weather-container {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .current-weather {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .location {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #007bff;
+        }
+        .condition {
+            font-size: 1.1rem;
+            color: #666;
+            margin-top: 5px;
+        }
+        .temp-info {
+            display: flex;
+            align-items: center;
+        }
+        .temperature {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        .detail-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .detail-title {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        .detail-value {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Datos Meteorológicos</h1>
+        <!-- Cambia 'index.html' por el nombre de tu primera página si es diferente -->
+        <a href="/" class="btn-volver">Volver</a>
+    </header>
+
+    <div class="weather-container">
+        <!-- Tarjeta Principal del Clima -->
+        <div class="card current-weather">
+            <div>
+                <div class="location">{{ciudad}}</div>
+                <div class="condition">{{codition}}</div>
+            </div>
+            <div class="temp-info">
+                <span class="temperature">{{tempu}}°C</span>
+            </div>
+        </div>
+
+        <!-- Detalles Adicionales -->
+        <div class="card">
+            <div class="details-grid">
+                <div class="detail-item">
+                    <div class="detail-title">Humedad</div>
+                    <div class="detail-value">{{humedad}}%</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-title">Viento</div>
+                    <div class="detail-value">{{vientos}} km/h</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-title">Presión</div>
+                    <div class="detail-value">{{presion}} hPa</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-title">Fecha</div>
+                    <div class="detail-value">{{Fecha}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
